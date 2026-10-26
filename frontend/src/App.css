@@ -1,0 +1,185 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f4;
+  color: #26372c;
+}
+
+.navbar {
+  background: #315b45;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.welcome {
+  background: #e0ecdf;
+  padding: 28px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.welcome h1 {
+  margin-top: 0;
+}
+
+.welcome p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card,
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #315b45;
+  margin-bottom: 0;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccd5cc;
+  border-radius: 7px;
+  font-size: 15px;
+  flex: 1;
+  min-width: 180px;
+}
+
+button {
+  background: #315b45;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #244532;
+}
+
+.empty {
+  color: #777;
+  padding: 12px 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e9e5;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task h3 {
+  margin: 0 0 8px;
+}
+
+.task p {
+  color: #69766d;
+  margin: 0 0 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #7a857c;
+}
+
+.completed,
+.pending {
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+.completed {
+  background: #dcefe0;
+  color: #246238;
+}
+
+.pending {
+  background: #fff0ce;
+  color: #8a5c00;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.delete {
+  background: #b93c3c;
+}
+
+.delete:hover {
+  background: #922d2d;
+}
+
+@media (max-width: 650px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
